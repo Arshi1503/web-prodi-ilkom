@@ -31,7 +31,7 @@ class PimpinanStaffResource extends Resource
                 Forms\Components\FileUpload::make('foto')->required(),
                 Forms\Components\Select::make('status')
                     ->options([
-                        'Kepala Program Studi Administrasi Bisnis' => 'Kepala Program Studi Administrasi Bisnis',
+                        'Kepala Program Studi Ilmu Komunikasi' => 'Kepala Program Studi Ilmu Komunikasi',
                         'Dosen' => 'Dosen',
                         'Staff' => 'Staff',
                     ])
@@ -39,8 +39,8 @@ class PimpinanStaffResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('nama')->required(),
                 Forms\Components\RichEditor::make('kata_sambutan')
-                ->visible(fn (Get $get) => $get('status') === 'Kepala Program Studi Administrasi Bisnis') 
-                ->required(fn (Get $get): bool => $get('status') === 'Kepala Program Studi Administrasi Bisnis')
+                ->visible(fn (Get $get) => $get('status') === 'Kepala Program Studi Ilmu Komunikasi') 
+                ->required(fn (Get $get): bool => $get('status') === 'Kepala Program Studi Ilmu Komunikasi')
                 ->columnSpanFull(),
             ]);
     }

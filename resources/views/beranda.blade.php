@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
     <head>
-        <title>Administrasi Bisnis - Beranda</title>
+        <title>Ilmu Komunikasi - Beranda</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="author" content="ThemeZaa">
@@ -58,7 +58,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="/">
                         <img src="images/Iwu.png" data-at2x="images/Iwu.png" alt="Logo" class="default-logo">
-                        <span class="brand-text text-black">Administrasi Bisnis</span>
+                        <span class="brand-text text-black">Ilmu Komunikasi</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                         <span class="navbar-toggler-line"></span>
@@ -76,7 +76,7 @@
                                     <li>
                                         <a href="/tentang"><i class="bi bi-info-circle"></i>
                                             <div class="submenu-icon-content">
-                                                <span>Tentang Administrasi Bisnis</span>
+                                                <span>Tentang Ilmu Komunikasi</span>
                                             </div>
                                         </a>
                                     </li>
@@ -213,7 +213,7 @@
             <div class="container h-100 position-relative">
                 <div class="row align-items-center justify-content-center h-100">
                     <div class="col-12 text-center">
-                        <div class="fs-120 lh-120 sm-fs-100 text-dark-gray fw-600 ls-minus-4px" data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 500, "staggervalue": 300, "easing": "easeOutQuad" }'>Program Studi Administrasi Bisnis</div>
+                        <div class="fs-120 lh-120 sm-fs-100 text-dark-gray fw-600 ls-minus-4px" data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 500, "staggervalue": 300, "easing": "easeOutQuad" }'>Program Studi Ilmu Komunikasi</div>
                     </div>
                 </div>
             </div>
@@ -260,7 +260,7 @@
                                 <i class="bi bi-heart-fill fs-15 text-dark-gray"></i>
                             </div>
                             <div class="feature-box-content">
-                                <span class="fs-14 fw-600 text-dark-gray text-uppercase">Administrasi Bisnis Berprestasi</span>
+                                <span class="fs-14 fw-600 text-dark-gray text-uppercase">Ilmu Komunikasi Berprestasi</span>
                             </div>
                         </div>
                     </div>
@@ -284,12 +284,12 @@
                     <!-- Kolom Teks -->
                     @if ($tentang && $tentang->deskripsi)
                     <div class="col-lg-6 content-container" style="height: 400px;" data-anime='{ "effect": "slide", "color": "#ffffff", "direction":"lr", "easing": "easeOutQuad", "delay":50 }'>
-                        <h1 class="section-title">Administrasi Bisnis.</h1>
+                        <h1 class="section-title">Ilmu Komunikasi.</h1>
                         <p class="section-text" style="text-align: justify;">
                             {!! Str::before($tentang->deskripsi, '</p>') . '</p>' !!}
                         </p>    
                         <a href="/tentang" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700">
-                            <span class="bg-base-color"></span>Tentang Administrasi Bisnis
+                            <span class="bg-base-color"></span>Tentang Ilmu Komunikasi
                         </a>
                     </div>
                     @endif
@@ -375,7 +375,7 @@
                 <div class="row align-items-center justify-content-center extra-very-small-screen">
                     <div class="col-xl-8 col-lg-10 text-center position-relative page-title-extra-large" data-anime='{ "el": "childs", "translateY": [-15, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                         <h1 class="fw-700 text-dark-gray mb-20px ls-minus-2px">Kata Sambutan</h1>
-                        <h2 class="fw-400 ls-0px mb-0">Selamat datang di website resmi program studi Administrasi Bisnis IWU</h2>
+                        <h2 class="fw-400 ls-0px mb-0">Selamat datang di website resmi program studi Ilmu Komunikasi IWU</h2>
                     </div>
                 </div>
             </div>

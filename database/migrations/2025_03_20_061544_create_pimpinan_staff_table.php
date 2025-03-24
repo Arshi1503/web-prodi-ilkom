@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pimpinan_staff', function (Blueprint $table) {
             $table->id();
             $table->text('foto');
-            $table->enum('status', ['Kepala Program Studi Administrasi Bisnis', 'Dosen', 'Staf']);
+            $table->enum('status', ['Kepala Program Studi Ilmu Komunikasi', 'Dosen', 'Staf']);
             $table->text('nama');
             $table->text('kata_sambutan')->nullable();
             $table->timestamps();

@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-        <title>Administrasi Bisnis - Detail Fasilitas</title>
+        <title>Ilmu Komunikasi - Detail Fasilitas</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="author" content="ThemeZaa">
@@ -58,7 +58,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="international-women-university-beranda.html">
                         <img src="{{asset('images/Iwu.png')}}" data-at2x="{{asset('images/Iwu.png')}}" alt="Logo" class="default-logo">
-                        <span class="brand-text text-black">Administrasi Bisnis</span>
+                        <span class="brand-text text-black">Ilmu Komunikasi</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                         <span class="navbar-toggler-line"></span>
@@ -76,7 +76,7 @@
                                     <li>
                                         <a href="/tentang"><i class="bi bi-info-circle"></i>
                                             <div class="submenu-icon-content">
-                                                <span>Tentang Administrasi Bisnis</span>
+                                                <span>Tentang Ilmu Komunikasi</span>
                                             </div>
                                         </a>
                                     </li>

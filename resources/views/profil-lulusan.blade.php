@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
-        <title>Administrasi Bisnis - Profil Lulusan</title>
+        <title>Ilmu Komunikasi - Profil Lulusan</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="author" content="ThemeZaa">
@@ -58,7 +58,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="international-women-university-beranda.html">
                         <img src="images/Iwu.png" data-at2x="images/Iwu.png" alt="Logo" class="default-logo">
-                        <span class="brand-text text-black">Administrasi Bisnis</span>
+                        <span class="brand-text text-black">Ilmu Komunikasi</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                         <span class="navbar-toggler-line"></span>
@@ -76,7 +76,7 @@
                                     <li>
                                         <a href="/tentang"><i class="bi bi-info-circle"></i>
                                             <div class="submenu-icon-content">
-                                                <span>Tentang Administrasi Bisnis</span>
+                                                <span>Tentang Ilmu Komunikasi</span>
                                             </div>
                                         </a>
                                     </li>
@@ -211,7 +211,7 @@
                 <div class="card shadow-lg border-0 rounded-3 overflow-hidden" data-anime='{ "opacity": [0, 1], "translateX": [30, 0], "duration": 600, "delay": 200, "staggervalue": 200, "easing": "easeOutQuad" }'>
                     <div class="card-body p-4">
                         <!-- Judul -->
-                        <h5 class="text-dark-gray fw-700" data-anime='{ "opacity": [0, 1], "translate": [0, 0], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>Profil Lulusan Administrasi Bisnis</h5>
+                        <h5 class="text-dark-gray fw-700" data-anime='{ "opacity": [0, 1], "translate": [0, 0], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>Profil Lulusan Ilmu Komunikasi</h5>
 
                         <!-- Paragraf -->
                         @if ($profilLulusan->first() && $profilLulusan->first()->teks)

@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-        <title>Administrasi Bisnis - Kurikulum</title>
+        <title>Ilmu Komunikasi - Kurikulum</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="author" content="ThemeZaa">
@@ -58,7 +58,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="international-women-university-beranda.html">
                         <img src="images/Iwu.png" data-at2x="images/Iwu.png" alt="Logo" class="default-logo">
-                        <span class="brand-text text-black">Administrasi Bisnis</span>
+                        <span class="brand-text text-black">Ilmu Komunikasi</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                         <span class="navbar-toggler-line"></span>
@@ -76,7 +76,7 @@
                                     <li>
                                         <a href="/tentang"><i class="bi bi-info-circle"></i>
                                             <div class="submenu-icon-content">
-                                                <span>Tentang Administrasi Bisnis</span>
+                                                <span>Tentang Ilmu Komunikasi</span>
                                             </div>
                                         </a>
                                     </li>
@@ -214,7 +214,7 @@
                         <!-- Judul dengan animasi fade-in -->
                         <h5 class="text-dark-gray fw-700" 
                             data-anime='{ "translateY": [20, 0], "opacity": [0,1], "duration": 800, "delay": 200, "easing": "easeOutQuad" }'>
-                            Kurikulum Program Studi Administrasi Bisnis
+                            Kurikulum Program Studi Ilmu Komunikasi
                         </h5>
 
                         <!-- Paragraf dengan animasi fade-in dan slide-up -->
@@ -254,7 +254,7 @@
                         <p class="w-80 xl-w-90 lg-w-100 mx-auto text-muted fs-15"
                             style="text-align: justify; margin-top: 30px;"
                             data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 400, "easing": "easeOutQuad" }'>
-                            Struktur kurikulum Program Studi Administrasi Bisnis Universitas Wanita Internasional dirancang untuk membekali mahasiswa dengan pengetahuan dan keterampilan yang dibutuhkan dalam bidang teknologi informasi. Kurikulum ini mengintegrasikan pembelajaran teori dan praktik secara seimbang, dengan perhatian khusus pada pengembangan kompetensi dasar yang relevan dengan kebutuhan industri digital dan masyarakat modern.
+                            Struktur kurikulum Program Studi Ilmu Komunikasi Universitas Wanita Internasional dirancang untuk membekali mahasiswa dengan pengetahuan dan keterampilan yang dibutuhkan dalam bidang teknologi informasi. Kurikulum ini mengintegrasikan pembelajaran teori dan praktik secara seimbang, dengan perhatian khusus pada pengembangan kompetensi dasar yang relevan dengan kebutuhan industri digital dan masyarakat modern.
                         </p>
 
                         <!-- Nav Tabs with fade-in and slide-up animation -->

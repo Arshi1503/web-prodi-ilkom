@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-        <title>Administrasi Bisnis - Tentang Administrasi Bisnis</title>
+        <title>Ilmu Komunikasi - Tentang Ilmu Komunikasi</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="author" content="ThemeZaa">
@@ -58,7 +58,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="international-women-university-beranda.html">
                         <img src="images/Iwu.png" data-at2x="images/Iwu.png" alt="Logo" class="default-logo">
-                        <span class="brand-text text-black">Administrasi Bisnis</span>
+                        <span class="brand-text text-black">Ilmu Komunikasi</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                         <span class="navbar-toggler-line"></span>
@@ -76,7 +76,7 @@
                                     <li>
                                         <a href="/tentang"><i class="bi bi-info-circle"></i>
                                             <div class="submenu-icon-content">
-                                                <span>Tentang Administrasi Bisnis</span>
+                                                <span>Tentang Ilmu Komunikasi</span>
                                             </div>
                                         </a>
                                     </li>
@@ -213,7 +213,7 @@
                         <img class="w-100" src="images/example1.jpeg" alt="">
                     </div>
                     <div class="col-xl-5 offset-xl-1 col-lg-6" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h2 class="fw-700 text-dark-gray ls-minus-1px">Tentang Administrasi Bisnis</h2>
+                        <h2 class="fw-700 text-dark-gray ls-minus-1px">Tentang Ilmu Komunikasi</h2>
                         @if ($tentang && $tentang->deskripsi)
                         <p class="w-95 lg-w-100 mb-30px">{!! $tentang->deskripsi !!}</p>
                         @endif

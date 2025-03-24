@@ -19,7 +19,7 @@ class TentangBiologi1Resource extends Resource
 
     protected static ?string $navigationGroup = 'Tentang Kami';
 
-    protected static ?string $navigationLabel = 'Tentang Administrasi Bisnis';
+    protected static ?string $navigationLabel = 'Tentang Ilmu Komunikasi';
 
     protected static ?string $navigationIcon = 'heroicon-o-information-circle';
 

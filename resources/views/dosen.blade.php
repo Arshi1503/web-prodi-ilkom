@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
-        <title>Administrasi Bisnis - Dosen</title>
+        <title>Ilmu Komunikasi - Dosen</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="author" content="ThemeZaa">
@@ -58,7 +58,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="international-women-university-beranda.html">
                         <img src="images/Iwu.png" data-at2x="images/Iwu.png" alt="Logo" class="default-logo">
-                        <span class="brand-text text-black">Administrasi Bisnis</span>
+                        <span class="brand-text text-black">Ilmu Komunikasi</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                         <span class="navbar-toggler-line"></span>
@@ -76,7 +76,7 @@
                                     <li>
                                         <a href="/tentang"><i class="bi bi-info-circle"></i>
                                             <div class="submenu-icon-content">
-                                                <span>Tentang Administrasi Bisnis</span>
+                                                <span>Tentang Ilmu Komunikasi</span>
                                             </div>
                                         </a>
                                     </li>
@@ -210,7 +210,7 @@
             <div class="container text-center">
                 <div class="card shadow-lg border-0 rounded-3 overflow-hidden mb-4">
                     <div class="card-body p-4">
-                        <h5 class="text-dark-gray fw-700">Dosen dan Staf Prodi Administrasi Bisnis</h5>
+                        <h5 class="text-dark-gray fw-700">Dosen dan Staf Prodi Ilmu Komunikasi</h5>
                         <div class="row">
                             <div class="col-12 p-md-0">
                             <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" 
