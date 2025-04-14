@@ -21,7 +21,7 @@ class CapaianPembelajaranResource extends Resource
 
     protected static ?string $navigationLabel = 'Capaian Pembelajaran';
 
-    protected static ?string $navigationIcon = 'heroicon-o-book-open';
+    protected static ?string $navigationIcon = 'heroicon-o-chart-bar';
 
     public static function form(Form $form): Form
     {

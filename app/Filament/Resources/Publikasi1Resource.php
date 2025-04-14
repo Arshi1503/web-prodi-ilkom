@@ -21,7 +21,7 @@ class Publikasi1Resource extends Resource
 
     protected static ?string $navigationLabel = 'Publikasi';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
     public static function form(Form $form): Form
     {

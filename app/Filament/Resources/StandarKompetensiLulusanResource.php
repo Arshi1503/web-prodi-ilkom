@@ -21,7 +21,7 @@ class StandarKompetensiLulusanResource extends Resource
 
     protected static ?string $navigationLabel = 'Standar Kompetensi Lulusan';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-check';
 
     public static function form(Form $form): Form
     {

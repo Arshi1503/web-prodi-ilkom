@@ -22,7 +22,7 @@ class KataSambutanResource extends Resource
 
     protected static ?string $navigationLabel = 'Kata Sambutan';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document';
 
     public static function form(Form $form): Form
     {

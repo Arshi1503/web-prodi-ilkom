@@ -19,9 +19,9 @@ class KompetensiResource extends Resource
 
     protected static ?string $navigationGroup = 'Akademik';
 
-    protected static ?string $navigationLabel = 'Kompetensi';
+    protected static ?string $navigationLabel = 'Kompetensi (CPL)';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     public static function form(Form $form): Form
     {

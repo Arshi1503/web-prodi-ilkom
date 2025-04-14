@@ -21,7 +21,7 @@ class KurikulumSemester1Resource extends Resource
 
     protected static ?string $navigationLabel = 'Kurikulum Semester 1';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-folder-open';
 
     public static function form(Form $form): Form
     {

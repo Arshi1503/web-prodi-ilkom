@@ -21,7 +21,7 @@ class SasaranKualitasResource extends Resource
 
     protected static ?string $navigationLabel = 'Sasaran Kualitas';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-chart-bar';
 
     public static function form(Form $form): Form
     {
