@@ -210,7 +210,7 @@
             <div class="container">
                 <div class="row align-items-center justify-content-center extra-very-small-screen">
                     <div class="col-xl-8 col-lg-10 text-center position-relative page-title-extra-large" data-anime='{ "el": "childs", "translateY": [-15, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h1 class="fw-700 text-dark-gray ls-minus-2px" style="margin-top: 100px;">Detail Fasilitas</h1>
+                        <h1 class="fw-700 text-dark-gray ls-minus-2px" style="margin-top: 100px;">{{ $kampus->nama }}</h1>
                     </div>
                 </div>
             </div>
@@ -244,7 +244,7 @@
                 <!-- Fasilitas Kampus -->
                 <div class="row mt-5">
                     <div class="col-12">
-                        <h4 class="text-center text-dark-gray fw-700">Fasilitas Kampus</h4>
+                        <h4 class="text-center text-dark-gray fw-700">Fasilitas {{ $kampus->nama }}</h4>
                     </div>
                     <div class="col-12">
                         <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" 
