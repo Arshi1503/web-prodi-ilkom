@@ -213,58 +213,52 @@
                 @if ($pimpinanStaff && $pimpinanStaff->foto)
                 <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" class="img-fluid rounded-circle" width="150" alt="Foto Dosen">
                 @endif
-                <h5 class="mt-2">{{ $pimpinanStaff->nama }}</h5>
-                <h6>{{ $pimpinanStaff->status }}</h6>
-                <p><i class="bi bi-person"></i> 405019203</p>
-                <p><i class="bi bi-envelope"></i> sririani@iwu.ac.id</p>
-                <a href="#" class="btn btn-secondary w-100 mb-2">Google Scholar</a>
-                <a href="#" class="btn btn-warning w-100">Scopus</a>
+                <h5 class="card-title fw-600 fs-17 lh-28 text-dark-gray text-dark-gray-hover d-inline-block w-95 sm-w-100 mt-5">{{ $pimpinanStaff->nama }}</h5>
+                <p>
+                    <i class="bi bi-person"></i> {{ $pimpinanStaff->nidn }} <br>
+                    <i class="bi bi-envelope"></i> {{ $pimpinanStaff->email }}
+                </p>
+                @if ($pimpinanStaff->id_google_scholar)
+                    @php
+                        $scholarUrl = 'https://scholar.google.com/citations?user=' . $pimpinanStaff->id_google_scholar;
+                    @endphp
+                    <a href="{{ $scholarUrl }}" target="_blank" class="btn w-100" style="background-color: #0D47A1; color: white;">Google Scholar</a>
+                @else
+                    <span class="text-muted">Profil Google Scholar belum ditemukan.</span>
+                @endif
             </div>
             
             <!-- Mata Kuliah dan Jadwal -->
             <div class="col-md-8">
-                <h4>Mata Kuliah yang Diampu dan Jadwal Perkuliahan</h4>
-                <table class="table table-bordered mt-3">
-                    <thead class="table-light">
-                        <tr>
-                            <th>No</th>
-                            <th>Nama Mata Kuliah</th>
-                            <th>Hari</th>
-                            <th>Waktu</th>
-                            <th>Ruang</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Biologi Sel</td>
-                            <td>Sabtu</td>
-                            <td>07.00-09.30</td>
-                            <td>R. 201 Kampus 1</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Struktur dan Perkembangan Tumbuhan</td>
-                            <td>Rabu</td>
-                            <td>12.50-15.20</td>
-                            <td>R. 203 Kampus 1</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Komputer Aplikasi IT III (Bioinformatika I)</td>
-                            <td>Senin</td>
-                            <td>12.50-15.20</td>
-                            <td>R. 108 Kampus 1</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Biostatistika</td>
-                            <td>Senin</td>
-                            <td>07.00-09.30</td>
-                            <td>R. 201 Kampus 1</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h4>Data Penelitian</h4>
+            <table class="table table-bordered mt-3">
+                <thead class="table-light">
+                    <tr>
+                        <th style="width: 6%;">No</th>
+                        <th>Judul Artikel</th>
+                        <th style="width: 16%;">Tahun Terbit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @forelse($results as $index => $article)
+                    <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td>
+                            <a href="{{ $article['link'] ?? '#' }}" target="_blank">
+                                {{ $article['title'] ?? '-' }}
+                            </a>
+                        </td>
+                        <td>
+                            {{ $article['year'] ?? '-' }}
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="3" class="text-center">Tidak ada artikel ditemukan untuk dosen ini.</td>
+                    </tr>
+                @endforelse
+                </tbody>
+            </table>
             </div>
         </div>
         <!-- end section -->

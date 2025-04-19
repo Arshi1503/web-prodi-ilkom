@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PimpinanStaffResource\Pages;
 use App\Filament\Resources\PimpinanStaffResource\RelationManagers;
+use App\Services\GoogleScholarService;
 use App\Models\PimpinanStaff;
 use Filament\Forms;
 use Filament\Forms\Get;
@@ -24,6 +25,12 @@ class PimpinanStaffResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
+    public function getScholarArticlesProperty()
+    {
+        $service = app(GoogleScholarService::class);
+        return $service->searchArticles($this->record->nama);
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -42,6 +49,9 @@ class PimpinanStaffResource extends Resource
                 ->visible(fn (Get $get) => $get('status') === 'Kepala Program Studi Ilmu Komunikasi') 
                 ->required(fn (Get $get): bool => $get('status') === 'Kepala Program Studi Ilmu Komunikasi')
                 ->columnSpanFull(),
+                Forms\Components\TextInput::make('id_google_scholar'),
+                Forms\Components\TextInput::make('nidn'),
+                Forms\Components\TextInput::make('email'),
             ]);
     }
 
@@ -54,6 +64,9 @@ class PimpinanStaffResource extends Resource
                 Tables\Columns\TextColumn::make('nama'),
                 Tables\Columns\TextColumn::make('kata_sambutan')
                     ->limit(50),
+                Tables\Columns\TextColumn::make('id_google_scholar'),
+                Tables\Columns\TextColumn::make('nidn'),
+                Tables\Columns\TextColumn::make('email'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -103,5 +116,31 @@ class PimpinanStaffResource extends Resource
     public static function getNavigationLabel(): string
     {
         return 'Pimpinan dan Staff'; 
+    }
+
+    public static function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['id_google_scholar'] = self::extractScholarId($data['id_google_scholar'] ?? null);
+        return $data;
+    }
+
+    public static function mutateFormDataBeforeSave(array $data): array
+    {
+        $data['id_google_scholar'] = self::extractScholarId($data['id_google_scholar'] ?? null);
+        return $data;
+    }
+
+    private static function extractScholarId(?string $input): ?string
+    {
+        if (!$input) return null;
+
+        // Kalau input tidak mengandung 'http', anggap itu sudah ID
+        if (!str_contains($input, 'http')) {
+            return $input;
+        }
+
+        // Ambil ID dari URL
+        parse_str(parse_url($input, PHP_URL_QUERY), $queryParams);
+        return $queryParams['user'] ?? null;
     }
 }

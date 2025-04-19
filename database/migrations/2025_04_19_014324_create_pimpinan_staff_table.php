@@ -17,6 +17,9 @@ return new class extends Migration
             $table->enum('status', ['Kepala Program Studi Ilmu Komunikasi', 'Dosen', 'Staf']);
             $table->text('nama');
             $table->text('kata_sambutan')->nullable();
+            $table->text('id_google_scholar')->nullable();
+            $table->string('nidn')->nullable();
+            $table->string('email')->unique()->nullable();
             $table->timestamps();
         });
     }
