@@ -60,4 +60,43 @@ class GoogleScholarService
 
         return [];
     }
+
+    public function getCitationGraph(string $authorId): array
+    {
+        $response = Http::get('https://serpapi.com/search', [
+            'engine' => 'google_scholar_author',
+            'author_id' => $authorId,
+            'api_key' => env('SERPAPI_KEY'),
+        ]);
+
+        if ($response->successful()) {
+            return $response->json()['cited_by']['graph'] ?? [];
+        }
+
+        return [];
+    }
+
+    public function getCitationStats(string $authorId): array
+    {
+        $response = Http::get('https://serpapi.com/search', [
+            'engine'    => 'google_scholar_author',
+            'author_id' => $authorId,
+            'api_key'   => env('SERPAPI_KEY'),
+        ]);
+
+        if (! $response->successful()) {
+            return [];
+        }
+
+        $table = $response->json()['cited_by']['table'] ?? [];
+
+        $stats = [];
+        foreach ($table as $item) {
+            // setiap $item = ['citations'=>[...] ] atau ['h_index'=>[...]] dsb
+            $key = array_key_first($item);
+            $stats[$key] = $item[$key];
+        }
+
+        return $stats;
+    }
 }

@@ -46,12 +46,16 @@ class DosenStaffController extends Controller
 
         // Ambil ID Google Scholar dari kolom id_google_scholar
         $results = [];
+        $citationGraph = [];
+        $citationStats = [];
 
         if ($pimpinanStaff->id_google_scholar) {
             $results = $service->getArticlesByAuthorId($pimpinanStaff->id_google_scholar);
+            $citationGraph = $service->getCitationGraph($pimpinanStaff->id_google_scholar);
+            $citationStats = $service->getCitationStats($pimpinanStaff->id_google_scholar);
         }
 
-        return view('detail-dosen', compact('pimpinanStaff', 'results', 'nama'));
+        return view('detail-dosen', compact('pimpinanStaff', 'results', 'nama', 'citationGraph', 'citationStats'));
     }
 
     public function showArtikelDosen($nama)
