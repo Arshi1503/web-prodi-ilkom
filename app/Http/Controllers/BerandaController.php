@@ -17,6 +17,6 @@ class BerandaController extends Controller
         $pimpinanStaff = PimpinanStaff::first();
         $publikasi = Publikasi::all();
         
-        return view('beranda', compact('tentang', 'visiMisiTujuan', 'pimpinanStaff', 'publikasi'));
+        return view('home', compact('tentang', 'visiMisiTujuan', 'pimpinanStaff', 'publikasi'));
     }
 }

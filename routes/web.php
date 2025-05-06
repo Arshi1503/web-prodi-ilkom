@@ -29,7 +29,7 @@ use App\Http\Controllers\PersyaratanMasukController;
 */
 
 Route::get('/', function () {
-    return view('beranda');
+    return view('home');
 });
 
 Route::get('/', [BerandaController::class, 'index']);
