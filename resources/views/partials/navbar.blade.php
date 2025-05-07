@@ -31,7 +31,7 @@
     <nav class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed lg:tw-mt-12">
         <div class="container-fluid">
             <div class="col-auto col-lg-2 me-lg-0 me-auto">
-                <a class="navbar-brand" href="demo-marketing.html">
+                <a class="navbar-brand" href="/">
                     <img src="{{asset('images/gambar/logo.png')}}" alt="" class="default-logo">
                     <img src="{{asset('images/gambar/logo.png')}}" alt="" class="alt-logo">
                     <img src="{{asset('images/gambar/logo.png')}}" alt="" class="mobile-logo"> 
@@ -47,55 +47,135 @@
                 <div class="collapse navbar-collapse" id="navbarNav"> 
                     <ul class="navbar-nav"> 
                         <li class="nav-item"><a href="/" class="nav-link">Beranda</a></li>
-                        <li class="nav-item"><a href="demo-marketing-about.html" class="nav-link">Tentang Kami</a></li>
                         <li class="nav-item dropdown dropdown-with-icon">
-                            <a href="demo-marketing-services.html" class="nav-link">Akademik</a>
+                            <a href="/tentang" class="nav-link">Tentang Kami</a>
                             <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li>
-                                    <a href="demo-marketing-services-details.html"><i class="feather icon-feather-users"></i>
+                                    <a href="/tentang"><i class="bi bi-info-circle"></i>
                                         <div class="submenu-icon-content">
-                                            <span>Engaging audiences</span>
-                                            <p>Lorem ipsum simply dummy text</p>
+                                            <span>Tentang Ilmu Komunikasi</span>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="demo-marketing-services-details.html"><i class="feather icon-feather-send"></i>
+                                    <a href="/visi-misi-tujuan"><i class="bi bi-bullseye"></i>
                                         <div class="submenu-icon-content">
-                                            <span>Marketing research</span>
-                                            <p>Lorem ipsum simply dummy text</p>
+                                            <span>Visi, Misi dan Tujuan</span>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="demo-marketing-services-details.html"><i class="feather icon-feather-briefcase"></i>
+                                    <a href="/struktur-organisasi"><i class="bi bi-diagram-3"></i>
                                         <div class="submenu-icon-content">
-                                            <span>Sales development</span>
-                                            <p>Lorem ipsum simply dummy text</p>
+                                            <span>Struktur Organisasi</span>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="demo-marketing-services-details.html"><i class="feather icon-feather-box"></i>
+                                <a href="/fasilitas"><i class="bi bi-house-door"></i>
                                         <div class="submenu-icon-content">
-                                            <span>Marketing campaigns</span>
-                                            <p>Lorem ipsum simply dummy text</p>
+                                            <span>Fasilitas</span>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="demo-marketing-services-details.html"><i class="feather icon-feather-share-2"></i>
+                                    <a href="/dosen"><i class="bi bi-mortarboard"></i>
                                         <div class="submenu-icon-content">
-                                            <span>Social media analysis</span>
-                                            <p>Lorem ipsum simply dummy text</p>
+                                            <span>Dosen</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/akreditasi"><i class="bi bi-check-circle"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Akreditasi</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/karir"><i class="bi bi-briefcase"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Karir</span>
                                         </div>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a href="demo-marketing-case-studies.html" class="nav-link">Publikasi</a></li>
-                        <li class="nav-item"><a href="demo-marketing-pricing.html" class="nav-link">Daftar Sekarang!</a></li>
+                        <li class="nav-item dropdown dropdown-with-icon">
+                            <a href="/kurikulum" class="nav-link">Akademik</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a href="/kurikulum"><i class="bi bi-journal-bookmark"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Kurikulum</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/profil-lulusan"><i class="bi bi-person-check"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Profil Lulusan</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown dropdown-with-icon">
+                            <a href="/artikel" class="nav-link">Publikasi</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a href="/artikel"><i class="bi bi-journal"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Artikel</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/berita"><i class="bi bi-newspaper"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Berita</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/kegiatan"><i class="bi bi-calendar-event"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Kegiatan</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown dropdown-with-icon">
+                            <a href="https://pmb.iwu.ac.id/" class="nav-link">Daftar Sekarang</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a href="https://pmb.iwu.ac.id/"><i class="bi bi-pencil-square"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Pendaftaran</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/jadwal-penerimaan"><i class="bi bi-calendar-event"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Jadwal Penerimaan</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/persyaratan-masuk"><i class="bi bi-check-circle"></i>
+                                        <div class="submenu-icon-content">
+                                            <span>Persyaratan Masuk</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -103,8 +183,8 @@
                 <div class="header-icon"> 
                     <div class="header-social-icon icon">
                         <a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/IWUIndonesia/?_rdc=1&_rdr#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fiwuindonesia" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                 </div>  
             </div>
