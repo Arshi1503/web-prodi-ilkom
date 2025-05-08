@@ -166,18 +166,20 @@
                                     </div>
                                 </div> 
                             </div>
-                            <!-- end process step item --> 
-                            <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow tw-mt-32">
-                                Selengkapnya
-                                <span class="bg-orient-blue text-white">
-                                    <i class="feather icon-feather-arrow-right icon-small"></i>
-                                </span>
-                            </a>  
+                            <!-- end process step item -->
+                            <div class="tw-flex lg:tw-justify-start tw-justify-center">
+                                <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
+                                    Selengkapnya
+                                    <span class="bg-orient-blue text-white">
+                                        <i class="feather icon-feather-arrow-right icon-small"></i>
+                                    </span>
+                                </a>  
+                            </div>
                         </div>  
                     </div> 
                     <div class="col-lg-6 text-center md-mb-20px offset-xl-1">
                         {{-- tambahkan gambar pada backend --}}
-                        <figure class="position-relative mb-0 overflow-hidden" data-shadow-animation="true" data-bottom-top="transform: translateY(70px)" data-top-bottom="transform: translateY(-70px)"> 
+                        <figure class="position-relative mb-0 overflow-hidden tw-hidden lg:tw-block" data-shadow-animation="true" data-bottom-top="transform: translateY(70px)" data-top-bottom="transform: translateY(-70px)"> 
                             <img src="{{ asset('images/gambar/hero.jpg') }}" class="w-100 border-radius-6px" alt=""> 
                         </figure>
                     </div>
@@ -188,7 +190,7 @@
         {{-- start section --}}
         <section class="pt-0 big-section tw-my-20">
             <div class="container">
-                <div class="row align-items-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'> 
+                <div class="tw-flex tw-flex-col-reverse lg:tw-flex-row tw-items-center tw-gap-4" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'> 
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
                         <h3 class="fw-700 text-dark-gray ls-minus-2px">Kata Sambutan</h3> 
                         <div class="tw-space-y-4 tw-text-justify tw-text-base tw-leading-relaxed tw-w-90 lg:tw-w-95 md:tw-w-full">
@@ -206,11 +208,11 @@
                         </a>                        
                     </div>
                     <div class="col-lg-6 position-relative md-mt-14 sm-mt-17 xs-mt-23"> 
-                        <div class="w-70 md-w-75 xs-w-90 tw-ml-32" data-animation-delay="50" data-shadow-animation="true">
+                        <div class="tw-flex tw-justify-center w-100" data-animation-delay="50">
                             {{-- @if ($pimpinanStaff && $pimpinanStaff->foto)
-                                <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" alt="" class=" border-radius-8px w-100 box-shadow-quadruple-large">
+                                <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" alt="" class=" border-radius-8px tw-w-[100%] md:tw-w-[60%]">
                             @endif --}}
-                            <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class=" border-radius-8px w-100">
+                            <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class=" border-radius-8px tw-w-[100%] md:tw-w-[60%]">
                         </div>
                     </div> 
                 </div> 
