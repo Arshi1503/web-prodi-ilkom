@@ -72,10 +72,10 @@
                 <div class="row align-items-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'> 
                     <div class="col-lg-6 position-relative md-mb-14 sm-mb-17 xs-mb-23"> 
                         <div class="w-70 md-w-75 xs-w-90" data-animation-delay="50" data-shadow-animation="true">
-                            {{-- @if ($tentang && $tentang->thumbnail)
+                            @if ($tentang && $tentang->thumbnail)
                                 <img src="{{ asset('storage/' . $tentang->thumbnail) }}" alt="" class="border-radius-8px w-100 box-shadow-quadruple-large">
-                            @endif --}}
-                            <img src="{{ asset('images/gambar/hero.jpg') }}" alt="" class="border-radius-8px w-100">
+                            @endif
+                            {{-- <img src="{{ asset('images/gambar/hero.jpg') }}" alt="" class="border-radius-8px w-100"> --}}
                         </div>
                         <div class="w-55 overflow-hidden position-absolute right-15px xs-w-60 bottom-minus-20px" data-shadow-animation="true" data-animation-delay="250" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
                             {{-- tambahkan gambar pada backend --}}
@@ -84,11 +84,11 @@
                     </div> 
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
                         <h3 class="fw-700 text-dark-gray ls-minus-2px">Apa yang Dipelajari dalam Prodi Ilmu Komunikasi?</h3>
-                        {{-- @if ($tentang && $tentang->deskripsi)
-                            <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100">{!! $tentang->deskripsi !!}></p>                            
-                        @endif --}}
-                        <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100">Ilmu Komunikasi adalah bidang studi yang mempelajari proses penyampaian pesan secara efektif melalui berbagai media, baik lisan, tulisan, maupun visual. Mahasiswa Ilmu Komunikasi dilatih untuk menjadi komunikator yang handal, memahami media massa, public relations, jurnalistik, dan komunikasi digital.</p> 
-                        <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
+                        @if ($tentang && $tentang->deskripsi)
+                            <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100">{!! $tentang->deskripsi !!}</p>                            
+                        @endif
+                        {{-- <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100">Ilmu Komunikasi adalah bidang studi yang mempelajari proses penyampaian pesan secara efektif melalui berbagai media, baik lisan, tulisan, maupun visual. Mahasiswa Ilmu Komunikasi dilatih untuk menjadi komunikator yang handal, memahami media massa, public relations, jurnalistik, dan komunikasi digital.</p>  --}}
+                        <a href="/tentang" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
                             Selengkapnya
                             <span class="bg-orient-blue text-white">
                                 <i class="feather icon-feather-arrow-right icon-small"></i>
@@ -119,11 +119,11 @@
                                         <span class="progress-step-separator bg-dark-gray opacity-1"></span>
                                     </div>
                                     <div class="process-content ps-35px sm-ps-25px last-paragraph-no-margin mb-40px">
-                                        {{-- <span class="d-block fw-600 text-dark-gray fs-17 mb-5px">Visi</span>
+                                        <span class="d-block fw-600 text-dark-gray fs-17 mb-5px">Visi</span>
                                         @if ($visiMisiTujuan && $visiMisiTujuan->visi)
-                                        <p class="w-90 sm-w-100">{!! $visiMisiTujuan->visi !!}</p>
-                                        @endif --}}
-                                        <p class="w-90 sm-w-100">Menjadi Program Studi Kimia yang unggul dalam pendidikan, penelitian, dan pengabdian kepada masyarakat, serta mampu bersaing di tingkat nasional maupun internasional pada tahun 2030.</p>
+                                        <span class="w-90 sm-w-100">{!! $visiMisiTujuan->visi !!}</span>
+                                        @endif
+                                        {{-- <p class="w-90 sm-w-100">Menjadi Program Studi Kimia yang unggul dalam pendidikan, penelitian, dan pengabdian kepada masyarakat, serta mampu bersaing di tingkat nasional maupun internasional pada tahun 2030.</p> --}}
                                     </div>
                                 </div> 
                             </div>
@@ -140,10 +140,10 @@
                                     </div>
                                     <div class="process-content ps-35px sm-ps-25px last-paragraph-no-margin mb-40px">
                                         <span class="d-block fw-600 text-dark-gray fs-17 mb-5px">Misi</span>
-                                        {{-- @if ($visiMisiTujuan && $visiMisiTujuan->misi)
-                                        <p class="w-90 sm-w-100">{!! $visiMisiTujuan->misi !!}</p>
-                                        @endif --}}
-                                        <p class="w-90 sm-w-100">Mengembangkan penelitian inovatif yang mendukung kemajuan ilmu pengetahuan dan kebutuhan industri.</p>
+                                        @if ($visiMisiTujuan && $visiMisiTujuan->misi)
+                                        <span class="w-90 sm-w-100">{!! $visiMisiTujuan->misi !!}</span>
+                                        @endif
+                                        {{-- <p class="w-90 sm-w-100">Mengembangkan penelitian inovatif yang mendukung kemajuan ilmu pengetahuan dan kebutuhan industri.</p> --}}
                                     </div>
                                 </div> 
                             </div>
@@ -159,16 +159,16 @@
                                     </div>
                                     <div class="process-content ps-35px sm-ps-25px last-paragraph-no-margin mb-30px">
                                         <span class="d-block fw-600 text-dark-gray fs-17 mb-5px">Tujuan</span>
-                                        {{-- @if ($visiMisiTujuan && $visiMisiTujuan->tujuan)
-                                        <p class="w-90 sm-w-100">{!! $visiMisiTujuan->tujuan !!}</p>
-                                        @endif --}}
-                                        <p class="w-90 sm-w-100">Mendorong terciptanya inovasi dan solusi praktis melalui kegiatan penelitian dan pengabdian masyarakat.</p>
+                                        @if ($visiMisiTujuan && $visiMisiTujuan->tujuan)
+                                        <span class="w-90 sm-w-100">{!! $visiMisiTujuan->tujuan !!}</span>
+                                        @endif
+                                        {{-- <p class="w-90 sm-w-100">Mendorong terciptanya inovasi dan solusi praktis melalui kegiatan penelitian dan pengabdian masyarakat.</p> --}}
                                     </div>
                                 </div> 
                             </div>
                             <!-- end process step item -->
                             <div class="tw-flex lg:tw-justify-start tw-justify-center">
-                                <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
+                                <a href="/visi-misi-tujuan" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
                                     Selengkapnya
                                     <span class="bg-orient-blue text-white">
                                         <i class="feather icon-feather-arrow-right icon-small"></i>
@@ -179,8 +179,10 @@
                     </div> 
                     <div class="col-lg-6 text-center md-mb-20px offset-xl-1">
                         {{-- tambahkan gambar pada backend --}}
-                        <figure class="position-relative mb-0 overflow-hidden tw-hidden lg:tw-block" data-shadow-animation="true" data-bottom-top="transform: translateY(70px)" data-top-bottom="transform: translateY(-70px)"> 
-                            <img src="{{ asset('images/gambar/hero.jpg') }}" class="w-100 border-radius-6px" alt=""> 
+                        <figure class="position-relative mb-0 overflow-hidden tw-hidden lg:tw-block" data-shadow-animation="true" data-bottom-top="transform: translateY(70px)" data-top-bottom="transform: translateY(-70px)">
+                            @if ($tentang && $tentang->thumbnail)
+                                <img src="{{ asset('storage/' . $tentang->thumbnail) }}" class="w-100 border-radius-6px" alt=""> 
+                            @endif
                         </figure>
                     </div>
                 </div>
@@ -194,13 +196,14 @@
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
                         <h3 class="fw-700 text-dark-gray ls-minus-2px">Kata Sambutan</h3> 
                         <div class="tw-space-y-4 tw-text-justify tw-text-base tw-leading-relaxed tw-w-90 lg:tw-w-95 md:tw-w-full">
-                            {{-- @if ($pimpinanStaff && $pimpianStaff->kata_sambutan)
+                            @if ($pimpinanStaff && $pimpinanStaff->kata_sambutan)
                                 <p>{!! $pimpinanStaff->kata_sambutan !!}</p>
-                            @endif --}}
-                            <p>Selamat datang di Program Studi Ilmu Komunikasi IWU. Kami berkomitmen untuk membekali mahasiswa dengan keterampilan komunikasi yang relevan dan berdaya saing global. Melalui kurikulum berbasis praktik dan penguatan karakter, kami membentuk lulusan yang siap menghadapi tantangan dunia kerja dan sosial.</p>
+                                <p class="tw-font-semibold tw-mb-0 tw-mt-2">{!! $pimpinanStaff->nama !!}, {!! $pimpinanStaff->status !!}</p>
+                            @endif
+                            {{-- <p>Selamat datang di Program Studi Ilmu Komunikasi IWU. Kami berkomitmen untuk membekali mahasiswa dengan keterampilan komunikasi yang relevan dan berdaya saing global. Melalui kurikulum berbasis praktik dan penguatan karakter, kami membentuk lulusan yang siap menghadapi tantangan dunia kerja dan sosial.</p> --}}
                         </div>
                         
-                        <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow tw-mt-7">
+                        <a href="{{ route('pimpinanStaff.showDetail', $pimpinanStaff->id) }}" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow tw-mt-7">
                             Selengkapnya
                             <span class="bg-orient-blue text-white">
                                 <i class="feather icon-feather-arrow-right icon-small"></i>
@@ -209,10 +212,10 @@
                     </div>
                     <div class="col-lg-6 position-relative md-mt-14 sm-mt-17 xs-mt-23"> 
                         <div class="tw-flex tw-justify-center w-100" data-animation-delay="50">
-                            {{-- @if ($pimpinanStaff && $pimpinanStaff->foto)
+                            @if ($pimpinanStaff && $pimpinanStaff->foto)
                                 <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" alt="" class=" border-radius-8px tw-w-[100%] md:tw-w-[60%]">
-                            @endif --}}
-                            <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class=" border-radius-8px tw-w-[100%] md:tw-w-[60%]">
+                            @endif
+                            {{-- <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class=" border-radius-8px tw-w-[100%] md:tw-w-[60%]"> --}}
                         </div>
                     </div> 
                 </div> 
@@ -233,7 +236,7 @@
                     <div class="col-12">
                         <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                             <li class="grid-sizer"></li>
-                            {{-- @foreach ($publikasi->where('status', 'Berita')->sortByDesc('waktu')->take(3) as $item)
+                            @foreach ($publikasi->where('status', 'Berita')->sortByDesc('waktu')->take(3) as $item)
                                 <li class="grid-item">
                                     <div class="card border-0 border-radius-5px box-shadow-quadruple-large box-shadow-quadruple-large-hover" style="min-height: 450px; display: flex; flex-direction: column; justify-content: space-between;">
                                         <div class="blog-image" style="height: 200px; overflow: hidden;">
@@ -268,9 +271,9 @@
                                         </div>
                                     </div>
                                 </li>
-                                @endforeach --}}
+                                @endforeach
                             <!-- start blog list -->
-                            <li class="grid-item">
+                            {{-- <li class="grid-item">
                                 <div class="card border-0 border-radius-5px box-shadow-quadruple-large box-shadow-quadruple-large-hover" style="min-height: 450px; display: flex; flex-direction: column; justify-content: space-between;">
                                     <div class="blog-image" style="height: 200px; overflow: hidden;">
                                         <a href="#" class="d-block">
@@ -349,7 +352,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </li> --}}
                             <!-- end blog list -->
                         </ul>
                     </div>
