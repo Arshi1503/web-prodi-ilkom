@@ -17,13 +17,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- style sheets and font icons  -->
         @vite('resources/css/app.css')
-        <link rel="stylesheet" href="css/vendors.min.css"/>
-        <link rel="stylesheet" href="css/icon.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/responsive.css"/>
-        <link rel="stylesheet" href="demos/marketing/marketing.css" />
+        <link rel="stylesheet" href="{{asset('css/vendors.min.css')}}"/>
+        <link rel="stylesheet" href="{{asset('css/icon.min.css')}}"/>
+        <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
+        <link rel="stylesheet" href="{{asset('css/responsive.css')}}"/>
+        <link rel="stylesheet" href="{{asset('demos/marketing/marketing.css')}}" />
     </head>
     <body class="loading" data-mobile-nav-style="classic">
+        @php
+        $isHome = Request::is('/');
+        @endphp
         <div id="preloader" class="tw-fixed tw-inset-0 tw-bg-white tw-z-50 tw-flex tw-items-center tw-justify-center">
             <svg class="tw-w-12 tw-h-12 tw-text-third tw-animate-spin" viewBox="0 0 64 64" fill="none"
              xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -37,7 +40,7 @@
             </svg>
         </div>
         <main>
-            @include('partials.navbar')
+            @include('partials.navbar', ['isHome' => $isHome ?? false])
             @yield('content')
             @include('partials.footer')
         </main>
@@ -50,9 +53,9 @@
         </div>
         <!-- end scroll progress -->
         <!-- javascript libraries -->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/vendors.min.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/vendors.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
         @vite('resources/js/app.js')
         @push('script')
         <script>
