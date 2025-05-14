@@ -15,4 +15,8 @@ class VisiMisiTujuan extends Model
         'misi',
         'tujuan'
     ];
+    protected $casts = [
+        'misi' => 'array',
+        'tujuan' => 'array',
+    ];
 }

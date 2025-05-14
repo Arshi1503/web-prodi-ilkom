@@ -15,7 +15,7 @@
         </section>
         <!-- end page title --> 
         <!-- start section --> 
-        <section> 
+        {{-- <section> 
             <div class="container">  
                 <div class="row justify-content-center mb-3">
                     <div class="col-lg-7 col-md-8 col-sm-9 text-center" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
@@ -64,10 +64,10 @@
                     <!-- end features box item -->
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- end section -->
         <!-- start section -->
-        <section class="pt-0 big-section">
+        <section class="tw-mt-10 pt-0 big-section">
             <div class="container">
                 <div class="row align-items-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'> 
                     <div class="col-lg-6 position-relative md-mb-14 sm-mb-17 xs-mb-23"> 
@@ -102,7 +102,7 @@
         <!-- start section --> 
         <!-- end section -->
         <!-- start section --> 
-        <section class="bg-very-light-gray overflow-hidden cover-background position-relative overlap-height" style="background-image: url(https://via.placeholder.com/1920x776)">
+                <section class="bg-very-light-gray overflow-hidden cover-background position-relative overlap-height">
             <div class="container overlap-gap-section">
                 <div class="row align-items-center justify-content-center mb-7"> 
                     <div class="col-xl-5 col-lg-6 mb-30px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -140,8 +140,10 @@
                                     </div>
                                     <div class="process-content ps-35px sm-ps-25px last-paragraph-no-margin mb-40px">
                                         <span class="d-block fw-600 text-dark-gray fs-17 mb-5px">Misi</span>
-                                        @if ($visiMisiTujuan && $visiMisiTujuan->misi)
-                                        <span class="w-90 sm-w-100">{!! $visiMisiTujuan->misi !!}</span>
+                                        @if ($visiMisiTujuan && is_array($visiMisiTujuan->misi) && count($visiMisiTujuan->misi) > 0)
+                                        <span class="w-90 sm-w-100">
+                                            {!! $visiMisiTujuan->misi[0]['text'] !!}
+                                        </span>
                                         @endif
                                         {{-- <p class="w-90 sm-w-100">Mengembangkan penelitian inovatif yang mendukung kemajuan ilmu pengetahuan dan kebutuhan industri.</p> --}}
                                     </div>
@@ -159,14 +161,16 @@
                                     </div>
                                     <div class="process-content ps-35px sm-ps-25px last-paragraph-no-margin mb-30px">
                                         <span class="d-block fw-600 text-dark-gray fs-17 mb-5px">Tujuan</span>
-                                        @if ($visiMisiTujuan && $visiMisiTujuan->tujuan)
-                                        <span class="w-90 sm-w-100">{!! $visiMisiTujuan->tujuan !!}</span>
+                                        @if ($visiMisiTujuan && is_array($visiMisiTujuan->tujuan) && count($visiMisiTujuan->tujuan) > 0)
+                                        <span class="w-90 sm-w-100">
+                                            {!! $visiMisiTujuan->tujuan[0]['text'] !!}
+                                        </span>
                                         @endif
                                         {{-- <p class="w-90 sm-w-100">Mendorong terciptanya inovasi dan solusi praktis melalui kegiatan penelitian dan pengabdian masyarakat.</p> --}}
                                     </div>
                                 </div> 
                             </div>
-                            <!-- end process step item -->
+                            <!-- end process step item --> 
                             <div class="tw-flex lg:tw-justify-start tw-justify-center">
                                 <a href="/visi-misi-tujuan" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
                                     Selengkapnya
@@ -178,10 +182,10 @@
                         </div>  
                     </div> 
                     <div class="col-lg-6 text-center md-mb-20px offset-xl-1">
-                        {{-- tambahkan gambar pada backend --}}
+                        {{-- Tambahkan Gambar berukuran besar di backend --}}
                         <figure class="position-relative mb-0 overflow-hidden tw-hidden lg:tw-block" data-shadow-animation="true" data-bottom-top="transform: translateY(70px)" data-top-bottom="transform: translateY(-70px)">
                             @if ($tentang && $tentang->thumbnail)
-                                <img src="{{ asset('storage/' . $tentang->thumbnail) }}" class="w-100 border-radius-6px" alt=""> 
+                                <img src="{{ asset('storage/'. $tentang->thumbnail) }}" class="w-100 border-radius-6px" alt=""> 
                             @endif
                         </figure>
                     </div>
