@@ -6,6 +6,10 @@ use App\Filament\Resources\VisiMisiTujuan1Resource\Pages;
 use App\Filament\Resources\VisiMisiTujuan1Resource\RelationManagers;
 use App\Models\VisiMisiTujuan;
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -28,14 +32,27 @@ class VisiMisiTujuan1Resource extends Resource
         return $form
             ->schema([
                 Forms\Components\RichEditor::make('visi')
-                ->required()
                 ->columnSpanFull(),
-            Forms\Components\RichEditor::make('misi')
-                ->required()
-                ->columnSpanFull(),
-            Forms\Components\RichEditor::make('tujuan')
-                ->required()
-                ->columnSpanFull(),
+                Repeater::make('misi')
+                    ->label('Misi')
+                    ->columnSpanFull()
+                    ->schema([
+                        TextInput::make('text')
+                            ->label('Misi')
+                            ->required(),
+                    ])
+                    ->defaultItems(1)
+                    ->addActionLabel('Tambah Baris Misi'),
+                Repeater::make('tujuan')
+                    ->label('Tujuan')
+                    ->columnSpanFull()
+                    ->schema([
+                        TextInput::make('text')
+                            ->label('Tujuan')
+                            ->required(),
+                    ])
+                    ->defaultItems(1)
+                    ->addActionLabel('Tambah Baris Tujuan'),
             ]);
     }
 
@@ -44,11 +61,14 @@ class VisiMisiTujuan1Resource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('visi')
-                ->limit(50),
+                ->limit(50)
+                ->html(),
             Tables\Columns\TextColumn::make('misi')
-                ->limit(50),
+                ->limit(50)
+                ->html(),
             Tables\Columns\TextColumn::make('tujuan')
-                ->limit(50),
+                ->limit(50)
+                ->html(),
             Tables\Columns\TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
@@ -99,4 +119,4 @@ class VisiMisiTujuan1Resource extends Resource
     {
         return 'Visi, Misi dan Tujuan'; 
     }
-}
+}   
