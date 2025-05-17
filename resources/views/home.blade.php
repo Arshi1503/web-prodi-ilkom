@@ -102,7 +102,7 @@
         <!-- start section --> 
         <!-- end section -->
         <!-- start section --> 
-                <section class="bg-very-light-gray overflow-hidden cover-background position-relative overlap-height">
+        <section class="bg-very-light-gray overflow-hidden cover-background position-relative overlap-height">
             <div class="container overlap-gap-section">
                 <div class="row align-items-center justify-content-center mb-7"> 
                     <div class="col-xl-5 col-lg-6 mb-30px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>

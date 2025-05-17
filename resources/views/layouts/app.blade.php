@@ -56,6 +56,7 @@
         <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
         <script type="text/javascript" src="{{asset('js/vendors.min.js')}}"></script>
         <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
+        <script src="//unpkg.com/alpinejs" defer></script>
         @vite('resources/js/app.js')
         @push('script')
         <script>

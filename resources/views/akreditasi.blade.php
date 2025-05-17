@@ -23,9 +23,40 @@
                         @endif
 
                         @if ($akreditasi && $akreditasi->foto)
-                        <div class="d-flex justify-content-center align-items-center animation-float" 
+                        <div x-data="{ open: false }" class="d-flex justify-content-center align-items-center tw-w-full tw-relative" 
                             data-anime='{ "effect": "slide", "color": "#ffffff", "direction":"lr", "easing": "easeOutQuad", "delay":50}'>
-                            <img class="w-50" src="{{ asset('storage/' . $akreditasi->foto) }}" alt="">
+                            <img 
+                            class="w-50" 
+                            src="{{ asset('storage/' . $akreditasi->foto) }}" 
+                            alt=""
+                            @click="open = true">
+
+                            <div 
+                                    x-show="open" 
+                                    @click.away="open = false" 
+                                    class="tw-fixed tw-inset-0 tw-bg-black/70 tw-flex tw-items-center tw-justify-center tw-z-[9999]"
+                                >
+                                    <div class="tw-bg-white tw-p-4 tw-rounded-xl tw-relative tw-max-w-4xl tw-w-full">
+                                        <button 
+                                            @click="open = false" 
+                                            class="tw-absolute tw-top-4 tw-right-4 tw-bg-white tw-text-black tw-rounded-full tw-shadow-md tw-w-10 tw-h-10 tw-flex tw-items-center tw-justify-center hover:tw-text-red-500 tw-mt-3 tw-mr-3"
+                                        >
+                                            &times;
+                                        </button>
+                                        @if ($akreditasi && $akreditasi->foto)
+                                        <img 
+                                            src="{{ asset('storage/' . $akreditasi->foto) }}" 
+                                            alt="Struktur Organisasi Besar"
+                                            class="tw-w-full tw-rounded-lg"
+                                        >   
+                                        @endif
+                                        {{-- <img 
+                                            src="{{ asset('images/gambar/small-hero.jpg') }}" 
+                                            alt="Struktur Organisasi Besar"
+                                            class="tw-w-full tw-rounded-lg"
+                                        > --}}
+                                    </div>
+                            </div>
                         </div>
                         @endif
                     </div>
